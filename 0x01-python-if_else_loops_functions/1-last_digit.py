@@ -11,4 +11,4 @@ elif lastDigit == 0:
 else:
     result = "and is less than 6 and not 0"
 
-print("Last digit of {} is {} ".format(number, lastDigit), result)
+print("Last digit of {} is {}".format(number, lastDigit), result)
