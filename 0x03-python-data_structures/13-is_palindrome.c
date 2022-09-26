@@ -1,17 +1,7 @@
 #include "lists.h"
 
 /**
- * is_palindrome - chexk if a list is palindrome
- * Description:
- * The approach uses the fact that a list
- * - is palindrom if:
- *   its first half is thesame as the reverse
- *   of its last half
- * - else its not a palindrom
- * The middle element is found using the
- * tortoise hare algorithm
- * In the case where the list has odd length
- * the middle element is disregarded
+ * is_palindrome - check if a list is palindrome
  *
  * @list: pointer to list
  * Return: 1 if true 0 otherwise
