@@ -3,11 +3,10 @@
 
 
 class Square:
-    """Define a square 
+    """Defines a square object
     """
     def __init__(self, size):
-        """Initialize the size
-    
+        """Initializes the size
         Args:
             param1 (int): size of the square
         """
