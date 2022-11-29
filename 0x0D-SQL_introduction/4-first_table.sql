@@ -2,4 +2,4 @@
 -- The database name will be passed as an argument of the mysql command
 CREATE TABLE first_table (
 	id INT,
-	name VARCHAR(256));
+	name VARCHAR(250));
