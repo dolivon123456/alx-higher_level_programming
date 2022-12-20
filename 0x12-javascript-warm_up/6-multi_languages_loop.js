@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-const lang = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+const langArray = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
 let i = 0;
-while (i < lang.length) {
-  console.log(lang[i]);
+while (i < langArray.length) {
+  console.log(langArray[i]);
   i++;
 }
