@@ -1,7 +1,6 @@
 #!/usr/bin/node
 
 const rargv = process.argv;
-
 if (isNaN(rargv[2])) {
 console.log('Not a number');
 } else {
