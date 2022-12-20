@@ -1,9 +1,8 @@
 #!/usr/bin/node
 
-const rarg = process.argv;
-
-if (rarg[2] == undefined) {
+const rargv = process.argv;
+if (rargv[2] === undefined) {
   console.log('No argument');
 } else {
-  console.log(rarg[2]);
+  console.log(rargv[2]);
 }
