@@ -10,7 +10,7 @@ class Rectangle {
   
   print () {
     const Rect = 'X'.repeat(this.width);
-    for (i = 0; i < this.height; i++) {
+    for (let i = 0; i < this.height; i++) {
       console.log(Rect);
     }
   }
