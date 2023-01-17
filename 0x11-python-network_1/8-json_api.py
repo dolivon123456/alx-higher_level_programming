@@ -1,22 +1,23 @@
 #!/usr/bin/python3
-
+"""A script tha:
+- takes in a letter
+- sends POST request to http://0.0.0.0:5000/search_user
+with the letter as a parameter.
 """
-This is a Python script that takes in a letter and sends a POST
-request to http://0.0.0.0:5000/search_user with the letter as a parameter.
-"""
-
-
-import requests
 import sys
+import requests
 
-if __name__ == '__main__':
-    r = requests.get('http://0.0.0.0:5000/search_user', data={'q': sys.argv[1]})
-    if r.headers.get('content-type') == 'application/json':
-        try:
-            js = r.json()
-            if len(js) == 0:
-                print("No result")
-            else:
-                print("{}: {}".format(js.get('id'), js.get('name')))
-        except requests.JSONDecodeError:
-            print("Not a valid JSON")
+
+if __name__ == "__main__":
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {"q": letter}
+
+    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+    try:
+        response = r.json()
+        if response == {}:
+            print("No result")
+        else:
+            print("[{}] {}".format(response.get("id"), response.get("name")))
+    except ValueError:
+        print("Not a valid JSON")
